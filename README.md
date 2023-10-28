@@ -1,6 +1,8 @@
 # HyperLearn
 
-This space is for the project for the SDSC Hackathon on Gen AI 2023. HyperLearn stands for Hyper-Personalized Learn Optimization Tool. It is a working title - any better name suggestions are very welcome ;-)
+WORK IN PROGRESS! :small_red_triangle::small_red_triangle::small_red_triangle:
+
+This space is for the project for the SDSC Hackathon on Gen AI 2023. HyperLearn stands for Hyper-Personalized Learn Optimization Tool. It is a working title - any better name suggestions are very welcome :wink:
 
 You can contact me under the gmail-address: ruiz.crp
 
@@ -31,7 +33,9 @@ The question generally is, whether OER can be used at all for this task as they 
 
 GEC are structured datasets that are often created by universities. They contain sentences and some sort of error coding. For example on position 3 you have
 
-- Russian grammatical error correction [RULEC-GEC](https://github.com/arozovskaya/RULEC-GEC). I filled out the requested form and asked the responsible person for obtaining the dataset.
+- NUS Corpus of Learner English (NUCLE). I filled out the requested form and am waiting for the reply. Also a non-commercial license.
+- [CoNLL-2014 Shared task](https://www.comp.nus.edu.sg/~nlp/sw/10gec_annotations.zip). [Data can be downloaded here](https://www.comp.nus.edu.sg/~nlp/sw/10gec_annotations.zip). There is also an [interesting paper on that here](https://www.comp.nus.edu.sg/~nlp/conll14st/CoNLLST01.pdf).
+- Russian grammatical error correction [RULEC-GEC](https://github.com/arozovskaya/RULEC-GEC). I filled out the requested form and asked the responsible person for obtaining the dataset. CC 4.0 by-sa.
 
 
 ### 2.5 Other probably useful sources
@@ -41,7 +45,7 @@ GEC are structured datasets that are often created by universities. They contain
 
 ### 2.6 Maybe unusable but interesting nevertheless
 
-- Junyi Academy: Kaggle dataset for the optimization of math excercises in CC4 license. However, the actual math-questions are not published (only the titles), and thus it does not seem useful if we really want to fine-tune: https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv
+- Junyi Academy: Kaggle dataset for the optimization of math excercises. However, the actual math-questions are not published (only the titles), and thus it does not seem useful if we really want to fine-tune: https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv. CC4.0by-nc-sa.
 
 
 
