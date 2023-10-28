@@ -16,9 +16,9 @@ There is a number of issues in this project, which is going to be elaborated her
 
 # Discussion / Research
 
-### 1) How to tackle Hyper-Personalization
+## 1) How to tackle Hyper-Personalization
 
-### 2) Data: Open Educational Resource for fine-tuning?
+## 2) Data: Open Educational Resource for fine-tuning?
 
 The question generally is, whether OER can be used at all for this task as they usually are unstructured and the quality is of all sorts. Note also that there might be licensing issues when using data - I'm trying to always state the license. I will try to structure here in several different kinds of data sources:
 
@@ -29,37 +29,53 @@ The question generally is, whether OER can be used at all for this task as they 
 5. Other probably useful sources
 6. Maybe unusuable but interesting nevertheless
 
-#### 2.1 Grammatical Error Corrections (GEC)
+### 2.1 Grammatical Error Corrections (GEC)
 
 GEC are structured datasets that are often created by universities. They contain sentences and some sort of error coding. Unfortunately, it seems that the methods are not congruent among them.
 
-##### English:
+#### 2.1.1 English:
 
 - NUS Corpus of Learner English (NUCLE). I filled out the requested form and am waiting for the reply. Also a non-commercial license.
 - [CoNLL-2014 Shared task](https://www.comp.nus.edu.sg/~nlp/sw/10gec_annotations.zip). [Data can be downloaded here](https://www.comp.nus.edu.sg/~nlp/sw/10gec_annotations.zip). There is also an [interesting paper on that here](https://www.comp.nus.edu.sg/~nlp/conll14st/CoNLLST01.pdf).
 - A corpus was made for the [BA2019 task](https://aclanthology.org/W19-4406/) see also [WI-LOCNESS](https://paperswithcode.com/dataset/locness-corpus), [data to download](https://www.cl.cam.ac.uk/research/nl/bea2019st/data/wi+locness_v2.1.bea19.tar.gz).
 - Cambridge Learner Corpus, see [paper here](https://aclanthology.org/P11-1019.pdf) and [data here](https://www.cl.cam.ac.uk/research/nl/bea2019st/data/fce_v2.1.bea19.tar.gz)
+- For those three academic links above, [this github-repo](https://github.com/chrisjbryant/doc-gec) might help to convert the data.
 - [The C4_200M Synthetic Dataset for GEC](https://blog.research.google/2021/08/the-c4200m-synthetic-dataset-for.html) was published by Google. [Github repo is here](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction), and [data is on kaggle](https://www.kaggle.com/felixstahlberg/the-c4-200m-dataset-for-gec) (approx 10 GB). But [Google's C4 dataset](https://www.tensorflow.org/datasets/catalog/c4) is also required to make the match with the hashes in it (806 GB).
 - There is [here a nice list with currently 14 GEC datasets](https://paperswithcode.com/datasets?task=grammatical-error-correction&page=1). Among them [JFLEG](https://paperswithcode.com/dataset/jfleg).
+- Unclear are datasets such as the [EFCAMDAT described here](https://eflnotes.wordpress.com/2013/09/16/getting-learner-data-for-vocabulary-activities-efcamdat/), and [allegedly (didn't work for me) available here](https://philarion.mml.cam.ac.uk/). The
 
-##### Russian:
+#### 2.1.2 Russian:
 
 - Russian grammatical error correction [RULEC-GEC](https://github.com/arozovskaya/RULEC-GEC). I filled out the requested form and asked the responsible person for obtaining the dataset. CC 4.0 by-sa.
 - For Russian there is also [ReLco which is openly available under MIT license](https://github.com/Askinkaty/Russian_learner_corpus_ReLCo)
 
-##### GEC-Related:
+#### 2.1.3 GEC-Related:
 
 There is [here also a tutorial on how-to fine-tune a transformer model on GEC](https://www.vennify.ai/fine-tune-grammar-correction/).
 
 
+### 2.2 Exercises: Text. Structured.
 
-#### 2.5 Other sources that could be useful
+### 2.3 Exercises: Text. Unstructured.
+
+#### 2.3.1 Unstructured Sources
+
+#### 2.3.2 Special: News Sources
+
+Having for example news sources in several languages could help us in developing some exercices ourselves (for example with Q/A generation based on texts, see below).
+
+- I contacted Euronews to ask whether we could use their texts material.  
+
+### 2.4 Exercises: Audio and Video
+
+
+### 2.5 Other sources that could be useful
 
 - [English word frequency](https://www.kaggle.com/datasets/rtatman/english-word-frequency)
 - [List of Russian idioms](https://www.kaggle.com/datasets/lpshkn/russin-idioms-phraseologisms)
 
 
-#### 2.6 Maybe unusable but interesting nevertheless
+### 2.6 Maybe unusable but interesting nevertheless
 
 - Junyi Academy: Kaggle dataset for the optimization of math excercises. However, the actual math-questions are not published (only the titles), and thus it does not seem useful if we really want to fine-tune: https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv. CC4.0by-nc-sa.
 
@@ -67,15 +83,20 @@ There is [here also a tutorial on how-to fine-tune a transformer model on GEC](h
 
 
 
-### 3) Quality of data and of answer: Knowledge-Graph solution?
+## 3) Quality of data and of answer: Knowledge-Graph solution?
 
 An important issue are wrong answers. As mentioned in the proposal, I tried llama2 to ask for simple Russian exercises to learn. I now also tried to tell him that he is an English teacher and is here to teach me. The conversation was quite interesting. It started then indeed with some exercises to spot for example the difference between "its" and "it's". But when I asked him to make more difficult exercises, he quickly started to hallucinate and created many wrong exercises and confusing answers.
 
 The bottomline is: How to make sure that the questions and answers are correct?
+### 3.1 Knowledge-Graphs
+
+### 3.2 Q/A Generation
+
+Q/A Generation could be used to create a learning setting where the person has to read a text (e.g. a newspaper article,, as mentioned in the data sources), and questions of understanding are generated by the algorithm. I guess a [source like this](https://towardsdatascience.com/questgen-an-open-source-nlp-library-for-question-generation-algorithms-1e18067fcdc6), is already out-to-date because llama2 is able to do that even without fine-tuning. Maybe we can target a random article and then insert the text into the chat-session?
 
 
 
-### 4) Plan for hackathon
+## 4) Plan for hackathon
 
 Please add here your thoughts. This is just a flexible proposal.
 
