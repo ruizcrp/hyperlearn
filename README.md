@@ -33,12 +33,21 @@ The question generally is, whether OER can be used at all for this task as they 
 
 GEC are structured datasets that are often created by universities. They contain sentences and some sort of error coding. Unfortunately, it seems that the methods are not congruent among them.
 
+##### English:
+
 - NUS Corpus of Learner English (NUCLE). I filled out the requested form and am waiting for the reply. Also a non-commercial license.
 - [CoNLL-2014 Shared task](https://www.comp.nus.edu.sg/~nlp/sw/10gec_annotations.zip). [Data can be downloaded here](https://www.comp.nus.edu.sg/~nlp/sw/10gec_annotations.zip). There is also an [interesting paper on that here](https://www.comp.nus.edu.sg/~nlp/conll14st/CoNLLST01.pdf).
-- There is [here a nice list with currently 14 GEC datasets](https://paperswithcode.com/datasets?task=grammatical-error-correction&page=1). Among them [JFLEG](https://paperswithcode.com/dataset/jfleg) also [WI-LOCNESS](https://paperswithcode.com/dataset/locness-corpus) were often cited in the literature.
+- A corpus was made for the [BA2019 task](https://aclanthology.org/W19-4406/) see also [WI-LOCNESS](https://paperswithcode.com/dataset/locness-corpus), [data to download](https://www.cl.cam.ac.uk/research/nl/bea2019st/data/wi+locness_v2.1.bea19.tar.gz).
+- Cambridge Learner Corpus, see [paper here](https://aclanthology.org/P11-1019.pdf) and [data here](https://www.cl.cam.ac.uk/research/nl/bea2019st/data/fce_v2.1.bea19.tar.gz)
 - [The C4_200M Synthetic Dataset for GEC](https://blog.research.google/2021/08/the-c4200m-synthetic-dataset-for.html) was published by Google. [Github repo is here](https://github.com/google-research-datasets/C4_200M-synthetic-dataset-for-grammatical-error-correction), and [data is on kaggle](https://www.kaggle.com/felixstahlberg/the-c4-200m-dataset-for-gec) (approx 10 GB). But [Google's C4 dataset](https://www.tensorflow.org/datasets/catalog/c4) is also required to make the match with the hashes in it (806 GB).
+- There is [here a nice list with currently 14 GEC datasets](https://paperswithcode.com/datasets?task=grammatical-error-correction&page=1). Among them [JFLEG](https://paperswithcode.com/dataset/jfleg).
+
+##### Russian:
+
 - Russian grammatical error correction [RULEC-GEC](https://github.com/arozovskaya/RULEC-GEC). I filled out the requested form and asked the responsible person for obtaining the dataset. CC 4.0 by-sa.
 - For Russian there is also [ReLco which is openly available under MIT license](https://github.com/Askinkaty/Russian_learner_corpus_ReLCo)
+
+##### GEC-Related:
 
 There is [here also a tutorial on how-to fine-tune a transformer model on GEC](https://www.vennify.ai/fine-tune-grammar-correction/).
 
