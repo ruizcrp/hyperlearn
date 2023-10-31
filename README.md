@@ -46,7 +46,7 @@ GEC are structured datasets that are often created by universities. They contain
 
 #### 2.1.2 Russian:
 
-- Russian grammatical error correction [RULEC-GEC](https://github.com/arozovskaya/RULEC-GEC). I filled out the requested form and asked the responsible person for obtaining the dataset. CC 4.0 by-sa.
+- Russian grammatical error correction [RULEC-GEC](https://github.com/arozovskaya/RULEC-GEC). We have the data available: I filled out the requested form and the responsible person authorized us. CC 4.0 by-sa.
 - For Russian there is also [ReLco which is openly available under MIT license](https://github.com/Askinkaty/Russian_learner_corpus_ReLCo)
 
 #### 2.1.3 GEC-Related:
@@ -106,16 +106,27 @@ Q/A Generation could be used to create a learning setting where the person has t
 
 Please add here your thoughts. This is just a flexible proposal.
 
+### 4.1 Overview of tasks for the project
+
 - Thinking and discussing together which solutions to use/try
 - Download OER(?)-Data on S3 or other place
 - Preparation of data to have it in a usable format
 - Preparation of language model (llama2, mirage,...?)
-- Fine-tuning of the model
+- Fine-tuning of the model ([recently saw this](https://towardsdatascience.com/mistral-7b-recipes-for-fine-tuning-and-quantization-on-your-computer-631401583f77) )
 - Exploration of the solution
 - Back to new exploration loops.. :-)
 - Preparation of a demo-UI for the final presentation
 
 There are many things still missing here. 
+
+### 4.2 Resource considerations
+
+Apparently Azure can be used with e.g. llama2 to fine-tune directly. Without needing to work with the transformer packages etc.? See here https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/introducing-llama-2-on-azure/ba-p/3881233
+
+We will need S3. If we get Google's S4 language corpus, we will need 1 TB only for that.
+
+Unclear how much GPU-power we will need for fine-tuning. 
+
 
 
 
