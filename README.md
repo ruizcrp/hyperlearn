@@ -20,17 +20,25 @@ There is a number of issues in this project, which is going to be elaborated her
 
 WORK IN PROGRESS! :small_red_triangle::small_red_triangle::small_red_triangle:
 
-First of all, [this might be the right place to find a solution](https://github.com/WLiK/LLM4Rec-Awesome-Papers) with [their paper here](https://arxiv.org/pdf/2305.19860.pdf). And [this paper also seems like a crucial overview](https://arxiv.org/pdf/2307.16376.pdf).
+First of all, [this might be the right place to find a solution](https://github.com/WLiK/LLM4Rec-Awesome-Papers) with [their Wu et al. August 2023 paper here](https://arxiv.org/pdf/2305.19860.pdf). And [the Chen et al. July 2023 paper also seems like a crucial overview](https://arxiv.org/pdf/2307.16376.pdf).
+
+Chen et al. 2023 talk about "three key aspects of
+personalization: recommender systems, personalized assistance, and personalized search". 
 
 There are the following possibilities:
 1) See above
 2) Recommender Systems (pre-LLM way?)
+3) Memory based
 
-### 1.2 Recommender Systems (pre-LLM way)
+### 1.2 Recommender Systems (pre-LLM way?)
+
+Definition by Chen et al. 2023: "These systems aim to predict and suggest items of interest to individual users, such as movies, products, or articles, based on their historical interactions and preferences".
 
 See for example [Facebook's Team Naumov et al.2019](https://arxiv.org/pdf/1906.00091.pdf). This is a solution (available on a github repo for pytorch) that was build for increasing the click-rates based on personalization. How to apply that to LLMs?
 
-s
+### 1.3 Memory based
+
+See for example [MemPrompt by Madaan et al. February 2023](https://arxiv.org/pdf/2201.06009.pdf) or [RecLLM by Google's Team Friedman et al. May 2023](https://arxiv.org/pdf/2305.07961.pdf).
 
 
 
