@@ -34,7 +34,7 @@ There are the following possibilities:
 
 Definition by Chen et al. 2023: "These systems aim to predict and suggest items of interest to individual users, such as movies, products, or articles, based on their historical interactions and preferences".
 
-See for example [Facebook's Team Naumov et al.2019](https://arxiv.org/pdf/1906.00091.pdf). This is a solution (available on a github repo for pytorch) that was build for increasing the click-rates based on personalization. How to apply that to LLMs?
+See for example [Facebook's Team Naumov et al.2019](https://arxiv.org/pdf/1906.00091.pdf). This is a solution (available on a github repo for pytorch) that was build for increasing the click-rates based on personalization. How to apply that to LLMs? A. overview seems to be also [here from Da'u and Salim 2020, although I cannot access the paper](https://link.springer.com/article/10.1007/s10462-019-09744-1#auth-Aminu-Da_u-Aff1-Aff2).
 
 ### 1.3 Memory based
 
