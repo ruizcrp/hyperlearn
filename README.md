@@ -38,7 +38,7 @@ See for example [Facebook's Team Naumov et al.2019](https://arxiv.org/pdf/1906.0
 
 ### 1.3 Memory based
 
-See for example [MemPrompt by Madaan et al. February 2023](https://arxiv.org/pdf/2201.06009.pdf) or [RecLLM by Google's Team Friedman et al. May 2023](https://arxiv.org/pdf/2305.07961.pdf).
+See for example [MemPrompt by Madaan et al. February 2023](https://arxiv.org/pdf/2201.06009.pdf) or [RecLLM by Google's Team Friedman et al. May 2023](https://arxiv.org/pdf/2305.07961.pdf). Also [ChatREC by Gao et al. May 2003](https://arxiv.org/pdf/2303.14524.pdf).
 
 
 
