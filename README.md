@@ -18,6 +18,23 @@ There is a number of issues in this project, which is going to be elaborated her
 
 ## 1) How to tackle Hyper-Personalization
 
+WORK IN PROGRESS! :small_red_triangle::small_red_triangle::small_red_triangle:
+
+First of all, [this might be the right place to find a solution](https://github.com/WLiK/LLM4Rec-Awesome-Papers) with [their paper here](https://arxiv.org/pdf/2305.19860.pdf). And [this paper also seems like a crucial overview](https://arxiv.org/pdf/2307.16376.pdf).
+
+There are the following possibilities:
+1) See above
+2) Recommender Systems (pre-LLM way?)
+
+### 1.2 Recommender Systems (pre-LLM way)
+
+See for example [Facebook's Team Naumov et al.2019](https://arxiv.org/pdf/1906.00091.pdf). This is a solution (available on a github repo for pytorch) that was build for increasing the click-rates based on personalization. How to apply that to LLMs?
+
+s
+
+
+
+
 ## 2) Data: Open Educational Resource for fine-tuning?
 
 The question generally is, whether OER can be used at all for this task as they usually are unstructured and the quality is of all sorts. Note also that there might be licensing issues when using data - I'm trying to always state the license. I will try to structure here in several different kinds of data sources:
