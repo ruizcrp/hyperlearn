@@ -20,29 +20,34 @@ There is a number of issues in this project, which is going to be elaborated her
 
 WORK IN PROGRESS! :small_red_triangle::small_red_triangle::small_red_triangle:
 
+In the pre-LLM way, a classical recommender system would have been used (see also below for some links). Maybe a good start-point with regards to a LLM-based solution would be the following figure taken out of [Wu et al. published relatively recently in May 2023](https://arxiv.org/pdf/2305.19860.pdf). It shows three modeling paradigms how LLMs could be combined with a recommender system. Actually in the third option, the LLM is at the same time the recommender system. I think this third option is a good minimal solution for this hackathon: It is heavily based on prompting some user profile information in advance, which is quite feasible to achieve a minimum but not very satisfying to make something advanced/interesting (e.g. information that user likes soccer and has issues with past continuous tenses). So if we can do more than that, this would be perfect. The options are discussed in more detail below.
 
 ![FIGURE1](figure1.png)
 
+Next to Wu et al, the following literature might provide a good overview about the topic:, [this might be the right place to find a solution](https://github.com/WLiK/LLM4Rec-Awesome-Papers) And [the Chen et al. July 2023 paper also seems like a crucial overview](https://arxiv.org/pdf/2307.16376.pdf). Also [this paper by Fao et al. July 2023](https://www.researchgate.net/publication/372137006_Recommender_Systems_in_the_Era_of_Large_Language_Models_LLMs) Seem to be a good start.
 
-First of all, [this might be the right place to find a solution](https://github.com/WLiK/LLM4Rec-Awesome-Papers) with [their Wu et al. August 2023 paper here](https://arxiv.org/pdf/2305.19860.pdf). And [the Chen et al. July 2023 paper also seems like a crucial overview](https://arxiv.org/pdf/2307.16376.pdf). Also [this paper by Fao et al. July 2023](https://www.researchgate.net/publication/372137006_Recommender_Systems_in_the_Era_of_Large_Language_Models_LLMs) Seem to be a good start.
 
-Chen et al. 2023 talk about "three key aspects of
-personalization: recommender systems, personalized assistance, and personalized search". 
+The following structure is currently used (maybe you have more ideas!):
+1) Minimal solution: LLM as Recommender System
+2) LLM Tokens plus Recommender System
+3) LLM Embeddings plus Recommender System
+4) Recommender Systems in a pre-LLM way
 
-There are the following possibilities:
-1) See above
-2) Recommender Systems (pre-LLM way?)
-3) Memory based
+### 1.1 Minimal solution: LLM as Recommender System
 
-### 1.2 Recommender Systems (pre-LLM way?)
+It seems that for example [RecLLM by Google's Team Friedman et al. May 2023](https://arxiv.org/pdf/2305.07961.pdf) used such an approach in a more elaborated chat-like you-tube commendation system (https://arxiv.org/pdf/2305.07961.pdf). It requires prompting elementsinto the memory, which is why one of the solutions is called [MemPrompt by Madaan et al. February 2023](https://arxiv.org/pdf/2201.06009.pdf). Also [ChatREC is a solution in that direction by Gao et al. May 2003](https://arxiv.org/pdf/2303.14524.pdf). See also [this blog-post using T5 as a simple fine-tuned LLM-recommender giving an input of purchases and a possible output-list of choices based on semantic context](https://towardsdatascience.com/using-large-language-models-as-recommendation-systems-49e8aeeff29b).
+
+### 1.2 LLM Tokens plus Recommender System
+
+### 1.3 LLM Embeddings plus Recommender System
+
+
+### 1.4 Recommender Systems in a pre-LLM way
 
 Definition by Chen et al. 2023: "These systems aim to predict and suggest items of interest to individual users, such as movies, products, or articles, based on their historical interactions and preferences".
 
 See for example [Facebook's Team Naumov et al.2019](https://arxiv.org/pdf/1906.00091.pdf). This is a solution (available on a github repo for pytorch) that was build for increasing the click-rates based on personalization. How to apply that to LLMs? A. overview seems to be also [here from Da'u and Salim 2020, although I cannot access the paper](https://link.springer.com/article/10.1007/s10462-019-09744-1#auth-Aminu-Da_u-Aff1-Aff2).
 
-### 1.3 Memory based
-
-See for example [MemPrompt by Madaan et al. February 2023](https://arxiv.org/pdf/2201.06009.pdf) or [RecLLM by Google's Team Friedman et al. May 2023](https://arxiv.org/pdf/2305.07961.pdf). Also [ChatREC by Gao et al. May 2003](https://arxiv.org/pdf/2303.14524.pdf).
 
 
 
