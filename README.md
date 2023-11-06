@@ -41,7 +41,11 @@ Weakness: Among other things such a minimal solution would be bound to token len
 
 ### 1.2 LLM Tokens plus Recommender System
 
-This could be a cool solution: [TALLRec by Bao et al. September 2023](https://arxiv.org/pdf/2305.00447.pdf) that even comes with [code](https://github.com/SAI990323/TALLRec)! They call their approach Large Recommendation Language Model (LRLM), which fits, right? :heart_eyes:  "Elaborately, TALLRec structures the recommendation data as instructions and tunes the LLM via an additional instruction tuning process. Moreover, given that LLM training necessitates a substantial amount of computing resources, TALLRec employs a lightweight tuning approach to efficiently adapt the LLMs to the recommendation task. Specifically, we apply the TALLRec framework on the LLaMA-7B model with a LoRA architecture, which ensures the framework can be deployed on an Nvidia RTX 3090 (24GB) GPU" (p.2)
+This could be a cool solution: [TALLRec by Bao et al. April 2023](https://arxiv.org/pdf/2305.00447.pdf) that even comes with [code](https://github.com/SAI990323/TALLRec)! They call their approach Large Recommendation Language Model (LRLM), which fits, right? :heart_eyes:  "Elaborately, TALLRec structures the recommendation data as instructions and tunes the LLM via an additional instruction tuning process. Moreover, given that LLM training necessitates a substantial amount of computing resources, TALLRec employs a lightweight tuning approach to efficiently adapt the LLMs to the recommendation task. Specifically, we apply the TALLRec framework on the LLaMA-7B model with a LoRA architecture, which ensures the framework can be deployed on an Nvidia RTX 3090 (24GB) GPU" (p.2). The text also mentions that they took a history of 10 items. This could be tried with for example a history of 10 language excercises.
+
+A similar solution could be based on a sequence of items. This is an [approach used by GenRec, Ji et al. 2023 July](https://arxiv.org/pdf/2307.00457.pdf). Another solution based on ranking is [PALR by Yang et al. 2023 May ](https://arxiv.org/pdf/2305.07622.pdf).
+
+
 
 ### 1.3 LLM Embeddings plus Recommender System
 
