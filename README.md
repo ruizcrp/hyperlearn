@@ -37,7 +37,11 @@ The following structure is currently used (maybe you have more ideas!):
 
 It seems that for example [RecLLM by Google's Team Friedman et al. May 2023](https://arxiv.org/pdf/2305.07961.pdf) used such an approach in a more elaborated chat-like you-tube commendation system (https://arxiv.org/pdf/2305.07961.pdf). It requires prompting elementsinto the memory, which is why one of the solutions is called [MemPrompt by Madaan et al. February 2023](https://arxiv.org/pdf/2201.06009.pdf). Also [ChatREC is a solution in that direction by Gao et al. May 2003](https://arxiv.org/pdf/2303.14524.pdf). See also [this blog-post using T5 as a simple fine-tuned LLM-recommender giving an input of purchases and a possible output-list of choices based on semantic context](https://towardsdatascience.com/using-large-language-models-as-recommendation-systems-49e8aeeff29b).
 
+Weakness: Among other things such a minimal solution would be bound to token length: This is a solution that could only keep a certain amount of tokens as information. This would hamper scalability particularly if you do many excercises.
+
 ### 1.2 LLM Tokens plus Recommender System
+
+Maybe a triangle solution between LLM, pre-LLM/classic recommender system, and a user? 
 
 ### 1.3 LLM Embeddings plus Recommender System
 
@@ -48,20 +52,24 @@ Definition by Chen et al. 2023: "These systems aim to predict and suggest items 
 
 See for example [Facebook's Team Naumov et al.2019](https://arxiv.org/pdf/1906.00091.pdf). This is a solution (available on a github repo for pytorch) that was build for increasing the click-rates based on personalization. How to apply that to LLMs? A. overview seems to be also [here from Da'u and Salim 2020, although I cannot access the paper](https://link.springer.com/article/10.1007/s10462-019-09744-1#auth-Aminu-Da_u-Aff1-Aff2).
 
-
+More sources: 
+- https://github.com/AiFangzhe/Exercise-Recommendation-System
+- https://www.aimsciences.org/article/doi/10.3934/steme.2022011
+- https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv
 
 
 
 ## 2) Data: Open Educational Resource for fine-tuning?
 
-The question generally is, whether OER can be used at all for this task as they usually are unstructured and the quality is of all sorts. Note also that there might be licensing issues when using data - I'm trying to always state the license. I will try to structure here in several different kinds of data sources:
+On the one hand, there are structured datasets that could easily be applied such as Grammatical Error Corrections. I guess that this could be a good minimal solution for the hackathon. On the other hand, Open Educational Resources in the form of exercises are rather usually are unstructured and the quality is of all sorts. Note also that there might be licensing issues when using data - I'm trying to always state the license below. At least two large GEC corpuses in English and Russian are available and license/permission-checked. I will try to structure here in several different kinds of data sources:
+
+
 
 1. Grammatical Error Corrections
 2. Exercises: Text. Structured.
 3. Exercises: Text. Unstructured. 
-4. Exercises: Audio and Video
-5. Other probably useful sources
-6. Maybe unusuable but interesting nevertheless
+4. Other probably useful sources
+5. Maybe unusuable but interesting nevertheless
 
 ### 2.1 Grammatical Error Corrections (GEC)
 
@@ -100,16 +108,15 @@ Having for example news sources in several languages could help us in developing
 
 - I contacted Euronews to ask whether we could use their texts material.  
 
-### 2.4 Exercises: Audio and Video
 
 
-### 2.5 Other sources that could be useful
+### 2.4 Other sources that could be useful
 
 - [English word frequency](https://www.kaggle.com/datasets/rtatman/english-word-frequency)
 - [List of Russian idioms](https://www.kaggle.com/datasets/lpshkn/russin-idioms-phraseologisms)
 
 
-### 2.6 Maybe unusable but interesting nevertheless
+### 2.5 Maybe unusable but interesting nevertheless
 
 - Junyi Academy: Kaggle dataset for the optimization of math excercises. However, the actual math-questions are not published (only the titles), and thus it does not seem useful if we really want to fine-tune: https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv. CC4.0by-nc-sa.
 
@@ -117,7 +124,7 @@ Having for example news sources in several languages could help us in developing
 
 
 
-## 3) Quality of data and of answer: Knowledge-Graph solution?
+## 3) Quality of data and of answer: Knowledge-Graph or Database solution?
 
 An important issue are wrong answers. As mentioned in the proposal, I tried llama2 to ask for simple Russian exercises to learn. I now also tried to tell him that he is an English teacher and is here to teach me. The conversation was quite interesting. It started then indeed with some exercises to spot for example the difference between "its" and "it's". But when I asked him to make more difficult exercises, he quickly started to hallucinate and created many wrong exercises and confusing answers.
 
@@ -127,12 +134,6 @@ The bottomline is: How to make sure that the questions and answers are correct?
 ### 3.2 Q/A Generation
 
 Q/A Generation could be used to create a learning setting where the person has to read a text (e.g. a newspaper article,, as mentioned in the data sources), and questions of understanding are generated by the algorithm. I guess a [source like this](https://towardsdatascience.com/questgen-an-open-source-nlp-library-for-question-generation-algorithms-1e18067fcdc6), is already out-to-date because llama2 is able to do that even without fine-tuning. Maybe we can target a random article and then insert the text into the chat-session?
-
-### 3.3 As comparison: Pre-LLM way of recommender system
-
-- https://github.com/AiFangzhe/Exercise-Recommendation-System
-- https://www.aimsciences.org/article/doi/10.3934/steme.2022011
-- https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv
 
 
 
