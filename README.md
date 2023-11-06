@@ -21,7 +21,7 @@ There is a number of issues in this project, which is going to be elaborated her
 WORK IN PROGRESS! :small_red_triangle::small_red_triangle::small_red_triangle:
 
 
-![FIGURE1](../figure1.png)
+![FIGURE1](figure1.png)
 
 
 First of all, [this might be the right place to find a solution](https://github.com/WLiK/LLM4Rec-Awesome-Papers) with [their Wu et al. August 2023 paper here](https://arxiv.org/pdf/2305.19860.pdf). And [the Chen et al. July 2023 paper also seems like a crucial overview](https://arxiv.org/pdf/2307.16376.pdf). Also [this paper by Fao et al. July 2023](https://www.researchgate.net/publication/372137006_Recommender_Systems_in_the_Era_of_Large_Language_Models_LLMs) Seem to be a good start.
